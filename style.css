@@ -81,12 +81,13 @@ a {
   font-weight: 600;
 }
 .round-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  padding-left: 190px;
-  padding-top: 80px;
-  padding-right: 170px;
-
+display: grid;
+padding:80px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 20px;
+    justify-items: center;
+justify-content:center;
+  align-items:center;
 }
 .round-card > * {
 width: 100px;
@@ -117,15 +118,14 @@ width: 100px;
 }
 .card-name {
   color: #00f0ff;
-  padding-left: 190px;
   font-family: "Orbitron", sans-serif;
+  display:grid;
+  justify-items: center;
 }
 .card {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  padding-left: 170px;
-  padding-top: 60px;
- padding-right: 170px;
+  grid-template-columns: 2fr;
+  padding: 70px;
   color: #ffffff;
   font-family: "Inter", sans-serif;
   row-gap: 30px;
@@ -182,5 +182,33 @@ width: 100px;
     text-shadow: 0 0 2px #00f0ff, 0 0 15px rgba(0, 240, 255, 0.5),
       0 0 30px rgba(0, 240, 255, 0.2);
     opacity: 0.85;
+  }
+}
+
+@media (min-width: 600px) {
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .card {
+        grid-template-columns: repeat(5, 1fr); 
+    }
+}
+@media (max-width: 768px) {
+    .card>* {
+        height: 100px; 
+        font-size: 14px; 
+        padding: 10px;   
+    }
+}
+@media(max-width: 768px){
+  .button{
+    padding: 10px 20px;
+  }
+}
+@media(max-width: 768px){
+  .logo{
+    padding: 10px 20px;
   }
 }
