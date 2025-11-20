@@ -14,6 +14,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-left: 20px;
+  margin-bottom:40px;
 }
 .search-bar {
   display: grid;
@@ -40,7 +41,24 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   animation: electric-pulse 4s infinite ease-in-out;
 }
-
+.video-deksotp{
+   position: fixed;         
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;     
+  z-index: -1;       
+}
+.video-mobile{
+   position: fixed;         
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;     
+  z-index: -1;       
+}
 .button {
   background-color: #ffae00;
   padding: 10px 60px;
@@ -50,6 +68,7 @@ body {
   font-family: "inter", sans-serif;
   font-weight: 700;
   transition: all 0.2s ease-in-out;
+  border: none;
 }
 .button:hover {
   background-color: #ffbe33;
@@ -65,6 +84,15 @@ body {
   padding: 20px;
   font-weight: 700;
   animation: electric-pulse 4s infinite;
+  width: fit-content;
+  margin: 0 auto;
+    background-color: rgb(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+   border:none;
+    border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+  max-width: 80%;
 }
 .top-para {
   color: white;
@@ -72,6 +100,14 @@ body {
   font-family: "Orbitron", sans-serif;
   font-weight: 500;
   font-size: 18px;
+     background-color: rgb(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+    border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    width: fit-content;
+  margin: 0 auto;
+    padding: 10px;
+    max-width: 80%;
 }
 a {
   text-decoration: none;
@@ -121,6 +157,15 @@ width: 100px;
   font-family: "Orbitron", sans-serif;
   display:grid;
   justify-items: center;
+  animation: electric-pulse 4s infinite ease-in-out;
+     background-color: rgb(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+    border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 80%;
 }
 .card {
   display: grid;
@@ -166,11 +211,18 @@ width: 100px;
 }
 .brand {
   display: grid;
-  justify-items: center;
+    grid-template-columns: auto auto;
+   justify-content: space-between;
+}
+.ete-logo{
+  height: 100px; 
+padding: 20px;
+
 }
 .brand-logo {
   height: 175px;
 }
+
 @keyframes electric-pulse {
   0%,
   100% {
@@ -189,10 +241,16 @@ width: 100px;
     .card {
         grid-template-columns: repeat(2, 1fr);
     }
+       .video-mobile{
+      display: none;
+    }
 }
 @media (min-width: 1024px) {
     .card {
         grid-template-columns: repeat(5, 1fr); 
+    }
+    .video-mobile{
+      display: none;
     }
 }
 @media (max-width: 768px) {
@@ -201,14 +259,21 @@ width: 100px;
         font-size: 14px; 
         padding: 10px;   
     }
-}
-@media(max-width: 768px){
-  .button{
+     .button{
     padding: 10px 20px;
   }
-}
-@media(max-width: 768px){
-  .logo{
+   .logo{
+
     padding: 10px 20px;
+  }
+  .brand{
+    justify-content:space-between;
+  }
+  .video-deksotp{
+    display: none;
+  }
+  body{
+    background-image: url(https://i.postimg.cc/L6j1nv4T/vecteezy-ai-generated-circuit-board-background-36185577.jpg);
+    background-size: cover;
   }
 }
