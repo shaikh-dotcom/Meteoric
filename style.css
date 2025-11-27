@@ -14,7 +14,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding-left: 20px;
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 .search-bar {
   display: grid;
@@ -41,23 +41,23 @@ body {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   animation: electric-pulse 4s infinite ease-in-out;
 }
-.video-deksotp{
-   position: fixed;         
+.video-deksotp {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit:cover;     
-  z-index: -1;       
+  object-fit: cover;
+  z-index: -1;
 }
-.video-mobile{
-   position: fixed;         
+.video-mobile {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit:cover;     
-  z-index: -1;       
+  object-fit: cover;
+  z-index: -1;
 }
 .button {
   background-color: #ffae00;
@@ -86,10 +86,10 @@ body {
   animation: electric-pulse 4s infinite;
   width: fit-content;
   margin: 0 auto;
-    background-color: rgb(255, 255, 255, 0.01);
+  background-color: rgb(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
-   border:none;
-    border-radius: 20px;
+  border: none;
+  border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
   margin-bottom: 10px;
   max-width: 80%;
@@ -100,14 +100,14 @@ body {
   font-family: "Orbitron", sans-serif;
   font-weight: 500;
   font-size: 18px;
-     background-color: rgb(255, 255, 255, 0.01);
+  background-color: rgb(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
-    border-radius: 20px;
+  border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    width: fit-content;
+  width: fit-content;
   margin: 0 auto;
-    padding: 10px;
-    max-width: 80%;
+  padding: 10px;
+  max-width: 80%;
 }
 a {
   text-decoration: none;
@@ -117,16 +117,16 @@ a {
   font-weight: 600;
 }
 .round-card {
-display: grid;
-padding:80px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-    gap: 20px;
-    justify-items: center;
-justify-content:center;
-  align-items:center;
+  display: grid;
+  padding: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+  gap: 20px;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .round-card > * {
-width: 100px;
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.05);
@@ -155,14 +155,14 @@ width: 100px;
 .card-name {
   color: #00f0ff;
   font-family: "Orbitron", sans-serif;
-  display:grid;
+  display: grid;
   justify-items: center;
   animation: electric-pulse 4s infinite ease-in-out;
-     background-color: rgb(255, 255, 255, 0.01);
+  background-color: rgb(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
-    border-radius: 20px;
+  border-radius: 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    width: fit-content;
+  width: fit-content;
   margin: 0 auto;
   padding: 20px;
   max-width: 80%;
@@ -179,7 +179,7 @@ width: 100px;
   text-align: center;
   justify-content: center;
   align-items: center;
-    column-gap: 20px;
+  column-gap: 20px;
 }
 .card > * {
   color: #00f0ff;
@@ -211,18 +211,267 @@ width: 100px;
 }
 .brand {
   display: grid;
-    grid-template-columns: auto auto;
-   justify-content: space-between;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
 }
-.ete-logo{
-  height: 100px; 
-padding: 20px;
-
+.ete-logo {
+  height: 100px;
+  padding: 20px;
 }
 .brand-logo {
   height: 175px;
 }
+.pop-up {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
 
+.pop-up-box {
+background: rgba(255,255,255,0.05);
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid #00f0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 50px rgba(0, 240, 255, 0.2);
+  
+}
+.pop-up-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.1), transparent);
+}
+.pop-up-tittle {
+  font-family: "Orbitron", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  color: #fff;
+}
+.close-btn {
+  background: transparent;
+  border: 1px solid #ff0055;
+  color: #ff0055;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.close-btn:hover {
+  background: #ff0055;
+  color: white;
+}
+.pop-up-tab {
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Orbitron", sans-serif;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  color: #00f0ff;
+  border-bottom: 2px solid #00f0ff;
+  background: rgba(0, 240, 255, 0.1);
+}
+.pop-up-body {
+  padding: 20px;
+  min-height: 300px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.tab-content {
+  display: none;
+  animation: slideUp 0.3s ease;
+}
+.active-content {
+  display: block;
+}
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.file-item:hover {
+  border-color: #00f0ff;
+}
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+.file-icon {
+  color: #00f0ff;
+  font-weight: bold;
+  border: 1px solid #00f0ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+.download-chip {
+  background: #00f0ff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.download-chip:hover {
+  background: white;
+}
+.pop-up-body::-webkit-scrollbar {
+    width: 8px;
+}
+.pop-up-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2); 
+    border-radius: 10px;
+}
+.pop-up-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 240, 255, 0.5); 
+    border-radius: 10px; 
+    border: 1px solid transparent; 
+    background-clip: content-box;
+}
+.pop-up-body::-webkit-scrollbar-thumb:hover {
+    background: #00F0FF; 
+}
+.pdf{
+    display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;  
+  z-index: 3000;
+}
+.pdf-box {
+ display: flex;
+ flex-direction: column;
+   background: rgba(255,255,255,0.05);
+  width: 60vw;
+  height: 90vh;
+  border: 1px solid #00f0ff;
+  border-radius: 15px;
+  box-shadow: 0 0 50px rgba(0, 240, 255, 0.2); 
+}
+.pdf-body {
+  flex-grow: 1;
+  position: relative;
+     padding: 20px;
+}
+.modal-header{
+  color: #ffffff;
+   padding: 20px;
+  border-bottom: 1px solid rgba(0, 240, 255, 0.3);
+  display: grid;
+ grid-template-columns: 1fr auto auto;
+ column-gap: 20px;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0, 240, 255, 0.1), transparent);
+}
+.expand-btn {
+    background: transparent;
+    border: 1px solid #00f0ff; 
+    color: #00f0ff;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.expand-btn:hover {
+    background: #00f0ff;
+    color: #000;
+    box-shadow: 0 0 10px #00f0ff; 
+}
+.pdf-box.fullscreen-active {
+    width: 100vw !important;  
+    height: 100vh !important; 
+    max-width: none;
+    border-radius: 0;
+    border: none;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+#pdf-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+.pdf-footer {
+    padding: 15px;
+    background: #101010;
+    border-top: 1px solid rgba(0, 240, 255, 0.2);
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .pdf-box {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+    }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes electric-pulse {
   0%,
   100% {
@@ -236,44 +485,38 @@ padding: 20px;
     opacity: 0.85;
   }
 }
-
 @media (min-width: 600px) {
-    .card {
-        grid-template-columns: repeat(2, 1fr);
-    }
-       .video-mobile{
-      display: none;
-    }
-}
-@media (min-width: 1024px) {
-    .card {
-        grid-template-columns: repeat(5, 1fr); 
-    }
-    .video-mobile{
-      display: none;
-    }
-}
-@media (max-width: 768px) {
-    .card>* {
-        height: 100px; 
-        font-size: 14px; 
-        padding: 10px;   
-    }
-     .button{
-    padding: 10px 20px;
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
   }
-   .logo{
-
-    padding: 10px 20px;
-  }
-  .brand{
-    justify-content:space-between;
-  }
-  .video-deksotp{
+  .video-mobile {
     display: none;
   }
-  body{
-    background-image: url(https://i.postimg.cc/L6j1nv4T/vecteezy-ai-generated-circuit-board-background-36185577.jpg);
-    background-size: cover;
+}
+@media (min-width: 1024px) {
+  .card {
+    grid-template-columns: repeat(5, 1fr);
   }
+}
+@media (max-width: 768px) {
+  .card > * {
+    height: 100px;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+  .button {
+    padding: 10px 20px;
+  }
+  .logo {
+    padding: 10px 20px;
+  }
+  .brand {
+    justify-content: space-between;
+  }
+  .video-deksotp {
+    display: none;
+  }
+ 
 }

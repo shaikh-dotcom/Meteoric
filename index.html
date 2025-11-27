@@ -14,7 +14,7 @@
         <img src="https://i.postimg.cc/B67m3Rxk/Whats-App-Image-2025-11-13-at-9-35-35-PM.jpg" class="brand-logo">
         <img src="https://i.postimg.cc/5ymBZmrt/E-logo.jpg" class="ete-logo">
     <video autoplay loop muted playsinline class="video-deksotp"><source src="assests/2792370-hd_1920_1080_30fps.mp4"type="video/mp4" ></video>
-       <video autoplay loop muted playsinline class="video-mobile"><source src="assests/100493-656497720_medium.mp4"type="video/mp4" ></video>
+      
     </header>
     <header class="header">
         <div class="logo">
@@ -57,20 +57,60 @@
                    <div class="round-card-eight"><a href="#">4th YEAR-EVEN</a></div>
         </nav>
       <h2 class="card-name">Circuit Path</h2>
-        <div class="card">
-            
-            <div class="card-one">Engineering Graphics and Design </div>
-               <div class="card-two"> Electrical Circuit Theory</div>
-                   <div class="card-three"> Sessional Based on ETE 1111</div>
-                       <div class="card-four">Computer Fundamentals and Programming with C </div>
-                           <div class="card-five">Sessional Based on ETE 1113 </div>
-                               <div class="card-six">Physics </div>
-                                   <div class="card-seven">Sessional Based on Phy 1115 </div>
-                                       <div class="card-eight"> Calculus and Differential Equations</div>
-                                           <div class="card-nine">Communicative English </div>
-                                               <div class="card-ten">English Language Lab</div>
+        <div class="card"> 
+            <div class="cards"data-subject="graphics">Engineering Graphics and Design</div>
+               <div class="cards" data-subject="circuit"> Electrical Circuit Theory</div>
+                   <div class="cards"data-subject="circuit-lab"> Sessional Based on ETE 1111</div>
+                       <div class="cards"data-subject="cse">Computer Fundamentals and Programming with C </div>
+                           <div class="cards"data-subject="cse-lab" >Sessional Based on ETE 1113 </div>
+                               <div class="cards" data-subject="physics">Physics </div>
+                                   <div class="cards" data-subject="Physics-lab">Sessional Based on Phy 1115 </div>
+                                       <div class="cards" data-subject="math"> Calculus and Differential Equations</div>
+                                           <div class="cards" data-subject="english">Communicative English </div>
+                                               <div class="cards" data-subject="english-lab">English Language Lab</div>
         </div>
     </main>
+    <div class="pop-up" id="pop-up-materials">
+        <div class="pop-up-box">
+            <div class="pop-up-header">
+                <h2 class="pop-up-tittle">Engineering Graphics and Design</h2>
+                <button class="close-btn" onclick="closeModal()">✖</button>
+            </div>
+            <div class="pop-up-tab">
+                <button class="tab-btn active" onclick="switchTab('books', this)">BOOKS</button>
+                <button class="tab-btn" onclick="switchTab('notes', this)">HAND NOTES</button>
+                <button class="tab-btn" onclick="switchTab('questions', this)">QUESTION BANK</button>
+            </div>
+            <div class="pop-up-body">
+                <div id="books" class="tab-content active-content"></div>
+                <div id="notes" class="tab-content"></div>
+                <div id="questions" class="tab-content"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pdf" id="pdf">
+        <div id="pdf-modal" class="modal-overlay">
+    <div class="pdf-box">
+        
+        <div class="modal-header">
+            <h2 id="pdf-preview-title" class="modal-title">DOC TITLE</h2>
+            <button class="close-btn" onclick="closePdfModal()">✖</button>
+            <a class="expand-btn" id="expand-link" href="#" target="_blank" title="Open in Google Drive">⛶</a>
+        </div>
+
+        <div class="pdf-body">
+            <iframe id="pdf-iframe" src=" "></iframe>
+        </div>
+
+        <div class="pdf-footer">
+            <a id="pdf-download-btn" href="#" download class="connect-btn">Download PDF</a>
+        </div>
+
+    </div>
+</div>  
+    </div>
+  
+    <script src="script.js"></script>
 </body>
 <script src ="assests/TypeLighterJS-Typewriter-master/typelighter.min.js"></script>
 
