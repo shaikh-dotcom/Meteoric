@@ -49,6 +49,7 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(75%);
 }
 .video-mobile {
   position: fixed;
@@ -129,13 +130,15 @@ a {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: transparent;
+  color: #00f2ff;
   backdrop-filter: blur(8px);
   display: grid;
   justify-content: center;
   align-items: center;
   border: 2px solid rgba(0, 240, 255, 1);
   transition: all 0.2s ease-in-out;
+  z-index: 2;
 }
 .round-card > *:hover {
   transform: scale(1.1);
@@ -145,12 +148,15 @@ a {
   color: #00f0ff;
   cursor: pointer;
 }
-.round-card > *:active {
-  border: 1px solid #00f0ff;
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.8), 0 0 20px rgba(0, 240, 255, 0.4),
-    0 0 30px rgba(0, 240, 255, 0.2);
-  background-color: rgba(0, 240, 255, 0.15);
-  color: #ffffff;
+.round-card > *.active {
+background-color: #00f2ff;
+    color: #000; 
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.6); 
+    border-color: #181212;
+}
+.round-card > *.active a {
+    color: #000000 !important;
+    font-weight: 700;
 }
 .card-name {
   color: #00f0ff;

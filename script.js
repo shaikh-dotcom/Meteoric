@@ -237,7 +237,177 @@ const resources = {
                 type:"pdf",name:"ETE_16 1-1 Semester Final Questions-physics",url:"https://drive.google.com/file/d/10PllO3JcwwKLEr02nhkk0Oqc_b7-uf3Z/preview"
             },
         ]
-    }
+    },
+
+"english":{
+    title:"English",
+    icon:"",
+    notes:[
+        {
+            type:"pdf",name:"Quotations and Tenders",url:"https://drive.google.com/file/d/1hFBzWiaQAjUExSuu1hmom8FUxLjyY9S_/preview"
+        },
+        {
+            type:"pdf",name:"Sample Business Letter",url:"https://drive.google.com/file/d/1wQIoDMxv68ahFsgmLmduWlTksaJphex5/preview"
+        },
+        {
+            type:"pdf",name:"Memo Sample",url:"https://drive.google.com/file/d/1w2xDCzLFH-I7I33omDbBXUcKfm-LwWAy/preview"
+        },
+        {
+            type:"pdf",name:"Business Proposal Letter Format",url:"https://drive.google.com/file/d/1s9_HQnWuCAtQ_4g9PeuR2pSa1mZhdB8_/preview"
+        },
+        {
+            type:"pdf",name:"Notice Inviting Tender",url:"https://drive.google.com/file/d/1pD7r1CqkOPP58fAeyp4pm1L-U3mWEeZY/preview"
+        },
+        {
+            type:"pdf",name:"Business Introduction Letter Format",url:"https://drive.google.com/file/d/1odFTcx-b3IdQe7j4nERHa-UscBoeM5dB/preview"
+        },
+        {
+            type:"pdf",name:"Inviting Quotation",url:"https://drive.google.com/file/d/1Tu5WHolstp57-WMOtOraPtufHZm1sel3/preview"
+        },
+        {
+            type:"pdf",name:"Resignation Letter Format",url:"https://drive.google.com/file/d/1QLv6PS1BO8UV7U3rIMNBnwuqHADpAL55/preview"
+        },
+        {
+            type:"pdf",name:"Recommendation Letter Format",url:"https://drive.google.com/file/d/1PaXY24vJbuYYU9FnxrXacbsSDc68Tplv/preview"
+        },
+         {
+            type:"pdf",name:"Memo Format",url:"https://drive.google.com/file/d/1PX7K_llDLVlTrZcqLAiW_gCzQkpqdWnE/preview"
+        },
+         {
+            type:"pdf",name:"Types of Business Letter",url:"https://drive.google.com/file/d/1NTs0t74ljp6qhSCTQ1KErkhyTUFLRob4/preview"
+        },
+         {
+            type:"pdf",name:"Elements of a Business Letter",url:"https://drive.google.com/file/d/1L6ONd0T-5vhIcGfpnogpWSp307kKDvSv/preview"
+        },
+         {
+            type:"pdf",name:"Complaint Letter Format",url:"https://drive.google.com/file/d/1JxXsE90n_oKd8Vg_cr7coKTIe0ZKU71x/preview"
+        },
+         {
+            type:"pdf",name:"Cover Letter Sample",url:"https://drive.google.com/file/d/1DyP8Oa9lhqkD3uSaoMFN9DXNfbKtkCI0/preview"
+        },
+         {
+            type:"pdf",name:"Sales Letter Format",url:"https://drive.google.com/file/d/1Dm6jl0ZZZ6pSyV7MaEWgooifi49Btda0/preview"
+        },
+         {
+            type:"pdf",name:"Cover Letter Format",url:"https://drive.google.com/file/d/1A71qNaFwblptnkQ9_bOCUQVkNzd1winq/preview"
+        },
+         {
+            type:"pdf",name:"Notice Inviting Tender",url:"https://drive.google.com/file/d/13WrnhjEXoPE7GImF9s4mB1gyblw-xOQh/preview"
+        },
+         {
+            type:"pdf",name:"Tutorial essays for science subjects",url:"https://drive.google.com/file/d/1Fe0s8HF--fVrffsORdJFKb2eeSpjaBed/preview"
+        },
+         {
+            type:"pdf",name:"How-to-write-a-Science-Esssay",url:"https://drive.google.com/file/d/1SsdVfaD3Fb_jv_DTC1EI4QEu_yQqoOi0/preview"
+        },
+        {
+            type:"pdf",name:"Meeting notice and Agenda Format",url:"https://drive.google.com/file/d/1DmcM7cnpRKEl2ezvb4lZzL-P6kAXiX50/preview"
+        },    
+    ],
+    questions:[
+        {
+            type:"pdf",name:"ETE_23 1-1 Semester Final Questions",url:"https://drive.google.com/file/d/1YIIMQZHAU8ByFg7VW2Wb1wbLZMFwPW1r/preview"
+        },
+        {
+            type:"pdf",name:"ETE_22 1-1 Semester Final Questions",url:"https://drive.google.com/file/d/1sELK_xf2Ea3PLL6NXWTkQJ0p2sOIeSh3/preview"
+        },
+        {
+            type:"pdf",name:"ETE_21 1-1 Semester Final Questions",url:"https://drive.google.com/file/d/1L49gCSYS-UPVLQM9NTvrp2A6mmGaAvHY/preview"
+        },
+        {
+            type:"pdf",name:"ETE_20 1-1 Semester Final Questions",url:"https://drive.google.com/file/d/1PV4QCTih0ESxMMeF6iTvDJ9Rcdlqj6pR/preview"
+        },
+        {
+            type:"pdf",name:"ETE_19 1-1 Semester Final Questions",url:"https://drive.google.com/file/d/1Y7P7bVH4jcd1XwOwehsXPLNA8UPPdYwF/preview"
+        },
+        {
+            type:"pdf",name:"ETE_18 1-1 Semester Final Questions",url:"https://drive.google.com/file/d/1hQ5cmrRS5Ve-yEVyh9VI5z_fPmvsKpKk/preview"
+        },
+        {
+            type:"pdf",name:"ETE_17 1-1 Semester Final Questions",url:"https://drive.google.com/file/d/16eRimVz7iVMO6sHWPQmb8y3w7L085Jjo/preview"
+        },
+    ],
+},
+ "circuit-lab":{
+title:"Circuit-Lab",
+icon:"",
+books:[
+{
+type:"pdf",name:"ETE 1112 Lab Manual",url:"https://drive.google.com/file/d/1NFLV3FJxbZXaa2dRL9zQicyMcjS8W8EH/preview"
+},
+],
+ },
+  "cse-lab":{
+title:"CSE-Lab",
+icon:"",
+books:[
+{
+type:"pdf",name:"Basic to Expert on C programming",url:"https://drive.google.com/file/d/1ZPlp97c0EKUIo3zL4mCvOB-IuybCLmZV/preview"
+},
+],
+ },
+   "Physics-lab":{
+title:"Physics-Lab",
+icon:"",
+books:[
+{
+type:"pdf",name:"Physics Lab Manual",url:"https://drive.google.com/file/d/1n0fWXNdt-s7GlZezPE2lVrX9FrQPot_c/preview"
+},
+],
+ },
+    "math":{
+title:"Math",
+icon:"",
+books:[
+{
+type:"pdf",name:"introduction-to-ordinary-differential-equations-4th",url:"https://drive.google.com/file/d/18oum6y3zOA5F9dy5ODW8ggXFEu3Xkw3I/preview"
+},
+{
+type:"pdf",name:"Differential equations 3rd edition Shepley L.Ross",url:"https://drive.google.com/file/d/1KqfVQVbRo4RcwxKvEM2g3uEhhHSAGPz3/preview"
+},
+{
+type:"pdf",name:"integral calculas by Das and Mukherjee",url:"https://drive.google.com/file/d/19cLuwFx375Do3Ru5CX0KMa7vJFUwhaME/preview"
+},
+
+],
+notes:[
+    {
+        type:"pdf",name:"Lecture-1-4(Helal Sir)",url:"https://drive.google.com/file/d/1HR_XNKMnsbAvgfHvNrTdoFhBgtHB_mYs/preview"
+    },
+    {
+        type:"pdf",name:"Lecture-5-12(Helal Sir)",url:"https://drive.google.com/file/d/1uRbA4ixo03SoApf1dQ5E0bjDm1YqEiv6/preview"
+    },
+    {
+        type:"pdf",name:"Lecture-13-18-Higher-order-DE(Helal Sir)",url:"https://drive.google.com/file/d/19qM1bxt33KgTVp3ECXRSezS6VlHPo3es/preview"
+    },
+    {
+        type:"pdf",name:"Integral calculus(Jahangir Sir)",url:"https://drive.google.com/file/d/1JXCQBpw7UsUzRf084h63oEJ36NBPZLsx/preview"
+    },
+],
+questions:[
+    {
+        type:"pdf",name:"ETE_23 1-1 Semester Final Questions-Math.pdf.pdf",url:"https://drive.google.com/file/d/1LNeXi1SmA_LlFyNaMOacy-VDIY5zpdJ-/preview"
+    },
+      {
+        type:"pdf",name:"ETE_22 1-1 Semester Final Questions-Math.pdf.pdf",url:"https://drive.google.com/file/d/1bHWyb8LpePCs3gVlQNT7eXQjEZjJ2nz4/preview"
+    },
+      {
+        type:"pdf",name:"ETE_20 1-1 Semester Final Questions-Math.pdf.pdf",url:"https://drive.google.com/file/d/1jJ9Otn9lf_kAOsbH7z5yghG5fZCi4Guc/preview"
+    },
+      {
+        type:"pdf",name:"ETE_19 1-1 Semester Final Questions-Math.pdf.pdf",url:"https://drive.google.com/file/d/11jk0sdyxl9wQDQGC7xUys7j1smF5nekm/preview"
+    },
+      {
+        type:"pdf",name:"ETE_18 1-1 Semester Final Questions-Math.pdf.pdf",url:"https://drive.google.com/file/d/1vhQwJhjbl-Qbwbccryazuasg5spMXWjl/preview"
+    },
+      {
+        type:"pdf",name:"ETE_17 1-1 Semester Final Questions-Math.pdf.pdf",url:"https://drive.google.com/file/d/1Md54O0-i7Ejn_AFIgY1m6uh6Hh0g2b78/preview"
+    },
+    {
+        type:"pdf",name:"ETE_16 1-1 Semester Final Questions-Math.pdf.pdf",url:"https://drive.google.com/file/d/1wBaWTI2zVapkGraoqsAnTLQszHzPEnlX/preview"
+    },
+],
+ },
  
 };
 
@@ -374,4 +544,28 @@ document.addEventListener('DOMContentLoaded', function() {
             closePdfModal();
         }
     }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Select all the semester circle cards
+    // We select direct children div of .round-card
+    const semesterCards = document.querySelectorAll('.round-card > div');
+
+    // 2. Add click event to each card
+    semesterCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            
+            // Optional: Prevent page jump if using '#' links
+            e.preventDefault();
+
+            // A. Remove 'active' class from ALL cards
+            semesterCards.forEach(c => c.classList.remove('active'));
+
+            // B. Add 'active' class to the CLICKED card
+            this.classList.add('active');
+
+            // Debugging: Confirm it works in console
+            console.log("Active Semester:", this.innerText);
+        });
+    });
 });
