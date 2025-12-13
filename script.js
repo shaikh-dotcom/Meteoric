@@ -1,4 +1,66 @@
 
+// --- CONFIGURATION: Which subjects go in which semester? ---
+const semesterConfig = {
+    "1-odd": [
+        { id: "graphics", text: "Engineering Graphics and Design" },
+        { id: "circuit",  text: "Electrical Circuit Theory" },
+        { id: "circuit-lab", text: "Sessional Based on ETE 1111" },
+        { id: "cse",      text: "Computer Fundamentals and Programming" },
+        { id: "cse-lab",  text: "Sessional Based on ETE 1113" },
+        { id: "physics",  text: "Physics" },
+        { id: "Physics-lab", text: "Sessional Based on Phy 1115" },
+        { id: "math",     text: "Calculus and Differential Equations" },
+        { id: "english",  text: "Communicative English" },
+        { id: "english-lab", text: "English Language Lab" }
+    ],
+    "1-even": [
+        // THESE ARE EXAMPLES. Replace "graphics" with your real 1-2 subject IDs from 'resources'
+        { id: "analog", text: "Analog Electronics-I" }, 
+        { id: "math",     text: "Linear Algebra" }
+    ],
+    
+};
+// --- FUNCTION: Load a Semester ---
+function loadSemester(semesterKey, clickedElement) {
+    const container = document.getElementById('subject-container');
+    const title = document.getElementById('semester-title');
+    
+    // 1. VISUALS: Update the Round Buttons
+    // Remove 'active' from ALL round cards
+    document.querySelectorAll('.round-card > div').forEach(el => {
+        el.classList.remove('active');
+    });
+    // Add 'active' to the one we just clicked
+    if(clickedElement) {
+        clickedElement.classList.add('active');
+    }
+
+    // 2. DATA: Get the list of subjects for this semester
+    const subjects = semesterConfig[semesterKey];
+
+    if (!subjects) {
+        container.innerHTML = "<h3>Coming Soon...</h3>";
+        return;
+    }
+
+    // 3. RENDER: Clear old cards and create new ones
+    container.innerHTML = ""; // Wipe clean
+    
+    subjects.forEach(sub => {
+        // Create the div: <div class="cards" data-subject="...">Text</div>
+        const card = document.createElement('div');
+        card.classList.add('cards');
+        card.setAttribute('data-subject', sub.id);
+        card.innerText = sub.text;
+
+        // Add the click event to open the modal
+        // (We add it here because these elements are created dynamically)
+        card.addEventListener('click', openModal);
+
+        // Add to container
+        container.appendChild(card);
+    });
+}
 const resources = {
     "graphics": {
         title: "ENGINEERING GRAPHICS",
@@ -546,26 +608,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Select all the semester circle cards
-    // We select direct children div of .round-card
-    const semesterCards = document.querySelectorAll('.round-card > div');
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. Load the default semester (1st Year Odd)
+    // We select the first button to pass it as the "active" element
+    const firstBtn = document.querySelector('.round-card-one');
+    loadSemester('1-odd', firstBtn);
 
-    // 2. Add click event to each card
-    semesterCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            
-            // Optional: Prevent page jump if using '#' links
-            e.preventDefault();
+    // 2. Global Event Listeners (Close modals)
+    window.onclick = function(event) {
+        const subjectModal = document.getElementById('pop-up-materials');
+        const pdfWrapper = document.getElementById('pdf'); 
 
-            // A. Remove 'active' class from ALL cards
-            semesterCards.forEach(c => c.classList.remove('active'));
-
-            // B. Add 'active' class to the CLICKED card
-            this.classList.add('active');
-
-            // Debugging: Confirm it works in console
-            console.log("Active Semester:", this.innerText);
-        });
-    });
+        if (event.target == subjectModal) closeModal();
+        if (event.target == pdfWrapper) closePdfModal();
+    }
 });

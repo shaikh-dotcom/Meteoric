@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETE-HUM</title>
+    <title>ETE-HUB</title>
     <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,8 +11,8 @@
 </head>
 <body>
     <header class="brand">
-        <img src="https://i.postimg.cc/B67m3Rxk/Whats-App-Image-2025-11-13-at-9-35-35-PM.jpg" class="brand-logo">
-        <img src="https://i.postimg.cc/5ymBZmrt/E-logo.jpg" class="ete-logo">
+        <img src="/assests/Whats-App-Image-2025-11-13-at-9-35-35-PM-removebg-preview.png" class="brand-logo">
+        <img src="/assests/E-logo-removebg-preview.png" class="ete-logo">
     <video autoplay loop muted playsinline class="video-deksotp"id="video-deksotp"><source src="assests/2792370-hd_1920_1080_30fps.mp4"type="video/mp4" ></video>
       
     </header>
@@ -47,27 +47,19 @@
            
         </div>
         <nav class="round-card">
-            <div class="round-card-one active"><a href="#">1st YEAR-ODD</a></div>
-             <div class="round-card-two"><a href="one-two.html" target="_blank" >1st YEAR-EVEN</a></div>
-              <div class="round-card-three"><a href="#">2nd YEAR-ODD</a></div>
-               <div class="round-card-four"><a href="#">2nd  YEAR-EVEN</a></div>
-                <div class="round-card-five"><a href="#">3rd YEAR-ODD</a></div>
-                 <div class="round-card-six"><a href="#">3rd YEAR-EVEN</a></div>
-                  <div class="round-card-seven"><a href="#">4th YEAR-ODD</a></div>
-                   <div class="round-card-eight"><a href="#">4th YEAR-EVEN</a></div>
+        <div class="round-card-one active" onclick="loadSemester('1-odd', this)">1st YEAR-ODD</div>
+        <div class="round-card-two"      onclick="loadSemester('1-even', this)">1st YEAR-EVEN</div>
+        <div class="round-card-three"    onclick="loadSemester('2-odd', this)">2nd YEAR-ODD</div>
+          <div class="round-card-four" onclick="loadSemester('2-even', this)">2nd  YEAR-EVEN</div>
+                <div class="round-card-five" onclick="loadSemester('3-odd', this)">3rd YEAR-ODD</div>
+                 <div class="round-card-six" onclick="loadSemester('3-even', this)">3rd YEAR-EVEN</div>
+                  <div class="round-card-seven" onclick="loadSemester('4-odd', this)">4th YEAR-ODD</div>
+                   <div class="round-card-eight" onclick="loadSemester('4-even', this)">4th YEAR-EVEN</div>
         </nav>
-      <h2 class="card-name">Circuit Path</h2>
-        <div class="card"> 
-            <div class="cards"data-subject="graphics">Engineering Graphics and Design</div>
-               <div class="cards" data-subject="circuit"> Electrical Circuit Theory</div>
-                   <div class="cards"data-subject="circuit-lab"> Sessional Based on ETE 1111</div>
-                       <div class="cards"data-subject="cse">Computer Fundamentals and Programming with C </div>
-                           <div class="cards"data-subject="cse-lab" >Sessional Based on ETE 1113 </div>
-                               <div class="cards" data-subject="physics">Physics </div>
-                                   <div class="cards" data-subject="Physics-lab">Sessional Based on Phy 1115 </div>
-                                       <div class="cards" data-subject="math"> Calculus and Differential Equations</div>
-                                           <div class="cards" data-subject="english">Communicative English </div>
-                                               <div class="cards" data-subject="english-lab">English Language Lab</div>
+
+    <h2 class="card-name" id="semester-title">Circuit path</h2>
+
+    <div class="card" id="subject-container">
         </div>
     </main>
     <div class="pop-up" id="pop-up-materials">

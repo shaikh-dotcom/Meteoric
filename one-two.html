@@ -3,9 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ETE-HUB</title>
+    <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<p>hdfjdhfh</p>
+    <header class="brand">
+        <img src="/assests/Whats-App-Image-2025-11-13-at-9-35-35-PM-removebg-preview.png" class="brand-logo">
+        <img src="/assests/E-logo-removebg-preview.png" class="ete-logo">
+    <video autoplay loop muted playsinline class="video-deksotp"id="video-deksotp"><source src="assests/2792370-hd_1920_1080_30fps.mp4"type="video/mp4" ></video>
+      
+    </header>
+    <header class="header">
+        <div class="logo">
+            ETE HUB
+        </div>
+        <nav>
+        <ul class="search-bar">
+
+            <li><button class="button">CONNECT</button></li>
+        </ul>
+       </nav> 
+    </header>
+    <main class="page">
+        <div class="heading">
+            <span class="typeWriter" 
+        data-text='["THE CENTRAL NODE FOR ETE ENGINEERS"]' 
+        data-max="0.6" 
+        data-speed="2" 
+        data-start="500">
+  </span> 
+  
+        </div>
+        <div class="top-para">
+                 <span class="typeWriter" 
+        data-text='[" Study Materials, Schematics, and Archives. From 1st Year Odd to 4th Year Even Semester"]' 
+        data-max="0.6" 
+        data-speed="2" 
+        data-start="500">
+  </span> 
+           
+        </div>
+        <nav class="round-card">
+            <div class="round-card-one active"><a href="index.html">1st YEAR-ODD</a></div>
+             <div class="round-card-two"><a href="#">1st YEAR-EVEN</a></div>
+              <div class="round-card-three"><a href="#">2nd YEAR-ODD</a></div>
+               <div class="round-card-four"><a href="#">2nd  YEAR-EVEN</a></div>
+                <div class="round-card-five"><a href="#">3rd YEAR-ODD</a></div>
+                 <div class="round-card-six"><a href="#">3rd YEAR-EVEN</a></div>
+                  <div class="round-card-seven"><a href="#">4th YEAR-ODD</a></div>
+                   <div class="round-card-eight"><a href="#">4th YEAR-EVEN</a></div>
+        </nav>
+      <h2 class="card-name">Circuit Path</h2>
+        <div class="card"> 
+            <div class="cards"data-subject="graphics">Engineering Graphics and Design</div>
+               <div class="cards" data-subject="circuit"> Electrical Circuit Theory</div>
+                   <div class="cards"data-subject="circuit-lab"> Sessional Based on ETE 1111</div>
+                       <div class="cards"data-subject="cse">Computer Fundamentals and Programming with C </div>
+                           <div class="cards"data-subject="cse-lab" >Sessional Based on ETE 1113 </div>
+                               <div class="cards" data-subject="physics">Physics </div>
+                                   <div class="cards" data-subject="Physics-lab">Sessional Based on Phy 1115 </div>
+                                       <div class="cards" data-subject="math"> Calculus and Differential Equations</div>
+                                           <div class="cards" data-subject="english">Communicative English </div>
+                                               <div class="cards" data-subject="english-lab">English Language Lab</div>
+        </div>
+    </main>
+    <div class="pop-up" id="pop-up-materials">
+        <div class="pop-up-box">
+            <div class="pop-up-header">
+                <h2 class="pop-up-tittle">Engineering Graphics and Design</h2>
+                <button class="close-btn" onclick="closeModal()">✖</button>
+            </div>
+            <div class="pop-up-tab">
+                <button class="tab-btn active" onclick="switchTab('books', this)">BOOKS</button>
+                <button class="tab-btn" onclick="switchTab('notes', this)">NOTES</button>
+                <button class="tab-btn" onclick="switchTab('questions', this)">QUESTION BANK</button>
+            </div>
+            <div class="pop-up-body">
+                <div id="books" class="tab-content active-content"></div>
+                <div id="notes" class="tab-content"></div>
+                <div id="questions" class="tab-content"></div>
+            </div>
+        </div>
+    </div>
+    <div class="pdf" id="pdf">
+        <div id="pdf-modal" class="modal-overlay">
+    <div class="pdf-box">
+        
+        <div class="modal-header">
+            <h2 id="pdf-preview-title" class="modal-title">DOC TITLE</h2>
+            <button class="close-btn" onclick="closePdfModal()">✖</button>
+            <a class="expand-btn" id="expand-link" href="#" target="_blank" title="Open in Google Drive">⛶</a>
+        </div>
+
+        <div class="pdf-body">
+            <iframe id="pdf-iframe" src=" "></iframe>
+        </div>
+
+        <div class="pdf-footer">
+            <a id="pdf-download-btn" href="#" download class="connect-btn">Download PDF</a>
+        </div>
+
+    </div>
+</div>  
+    </div>
+  
+    <script src="script.js"></script>
 </body>
+<script src ="assests/TypeLighterJS-Typewriter-master/typelighter.min.js"></script>
+
 </html>
