@@ -16,7 +16,14 @@ const semesterConfig = {
     "1-even": [
         // THESE ARE EXAMPLES. Replace "graphics" with your real 1-2 subject IDs from 'resources'
         { id: "analog", text: "Analog Electronics-I" }, 
-        { id: "math",     text: "Linear Algebra" }
+        { id: "digital",     text: "Digital Electronics" },
+        {id:"analog-lab" ,text:"Sessional based on ETE 1211"},
+         { id: "digital-lab",     text: "Sessional based on ETE 1213" },
+          { id: "cse",     text: "Object Oriented Programming Lab" },
+           { id: "machine",     text: "Electrical Machine" },
+            { id: "machine-lab",     text: "Sessional based on EEE 1253" },
+             { id: "math-ii",     text: "Linear Algebra and Three Dimensional Geometry " },
+              { id: "economics",     text: "Financial Accounts and Economic Analysis" },
     ],
     
 };
