@@ -1,110 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ETE-HUB</title>
-    <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-</head>
-<body>   
-    <video autoplay loop muted playsinline class="video-deksotp"id="video-deksotp"><source src="assests/2792370-hd_1920_1080_30fps.mp4"type="video/mp4" ></video>
-      
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="video-deksotp"
+      id="video-deksotp"
+    >
+      <source src="assests/2792370-hd_1920_1080_30fps.mp4" type="video/mp4" />
+    </video>
+
     <header class="brand">
-        <img src="assests/Whats-App-Image-2025-11-13-at-9-35-35-PM-removebg-preview.png" class="brand-logo">
-        <img src="assests/E-logo-removebg-preview.png" class="ete-logo">
- 
+      <img
+        src="assests/Whats-App-Image-2025-11-13-at-9-35-35-PM-removebg-preview.png"
+        class="brand-logo"
+      />
+      <img src="assests/E-logo-removebg-preview.png" class="ete-logo" />
     </header>
     <header class="header">
-        <div class="logo">
-            ETE HUB
-        </div>
-        <nav>
+      <div class="logo">ETE HUB</div>
+      <nav>
         <ul class="search-bar">
-
-            <li><button class="button">CONNECT</button></li>
+          <li><button class="button">CONNECT</button></li>
         </ul>
-       </nav> 
+      </nav>
     </header>
     <main class="page">
-        <div class="heading">
-            <span class="typeWriter" 
-        data-text='["THE CENTRAL NODE FOR ETE ENGINEERS"]' 
-        data-max="0.6" 
-        data-speed="2" 
-        data-start="500">
-  </span> 
-  
+      <div class="heading">
+        <span
+          class="typeWriter"
+          data-text='["THE CENTRAL NODE FOR ETE ENGINEERS"]'
+          data-max="0.6"
+          data-speed="2"
+          data-start="500"
+        >
+        </span>
+      </div>
+      <div class="top-para">
+        <span
+          class="typeWriter"
+          data-text='[" Study Materials, Schematics, and Archives. From 1st Year Odd to 4th Year Even Semester"]'
+          data-max="0.6"
+          data-speed="2"
+          data-start="500"
+        >
+        </span>
+      </div>
+      <nav class="round-card">
+        <div
+          class="round-card-one active"
+          onclick="loadSemester('1-odd', this)"
+        >
+          1st YEAR-ODD
         </div>
-        <div class="top-para">
-                 <span class="typeWriter" 
-        data-text='[" Study Materials, Schematics, and Archives. From 1st Year Odd to 4th Year Even Semester"]' 
-        data-max="0.6" 
-        data-speed="2" 
-        data-start="500">
-  </span> 
-           
+        <div class="round-card-two" onclick="loadSemester('1-even', this)">
+          1st YEAR-EVEN
         </div>
-        <nav class="round-card">
-        <div class="round-card-one active" onclick="loadSemester('1-odd', this)">1st YEAR-ODD</div>
-        <div class="round-card-two"      onclick="loadSemester('1-even', this)">1st YEAR-EVEN</div>
-        <div class="round-card-three"    onclick="loadSemester('2-odd', this)">2nd YEAR-ODD</div>
-        <div class="round-card-four" onclick="loadSemester('2-even', this)">2nd  YEAR-EVEN</div>
-        <div class="round-card-five" onclick="loadSemester('3-odd', this)">3rd YEAR-ODD</div>
-        <div class="round-card-six" onclick="loadSemester('3-even', this)">3rd YEAR-EVEN</div>
-        <div class="round-card-seven" onclick="loadSemester('4-odd', this)">4th YEAR-ODD</div>
-        <div class="round-card-eight" onclick="loadSemester('4-even', this)">4th YEAR-EVEN</div>
-        </nav>
+        <div class="round-card-three" onclick="loadSemester('2-odd', this)">
+          2nd YEAR-ODD
+        </div>
+        <div class="round-card-four" onclick="loadSemester('2-even', this)">
+          2nd YEAR-EVEN
+        </div>
+        <div class="round-card-five" onclick="loadSemester('3-odd', this)">
+          3rd YEAR-ODD
+        </div>
+        <div class="round-card-six" onclick="loadSemester('3-even', this)">
+          3rd YEAR-EVEN
+        </div>
+        <div class="round-card-seven" onclick="loadSemester('4-odd', this)">
+          4th YEAR-ODD
+        </div>
+        <div class="round-card-eight" onclick="loadSemester('4-even', this)">
+          4th YEAR-EVEN
+        </div>
+      </nav>
 
-    <h2 class="card-name" id="semester-title">Circuit path</h2>
+      <h2 class="card-name" id="semester-title">Circuit path</h2>
 
-    <div class="card" id="subject-container">
-        </div>
+      <div class="card" id="subject-container"></div>
     </main>
     <div class="pop-up" id="pop-up-materials">
-        <div class="pop-up-box">
-            <div class="pop-up-header">
-                <h2 class="pop-up-tittle">Engineering Graphics and Design</h2>
-                <button class="close-btn" onclick="closeModal()">✖</button>
-            </div>
-            <div class="pop-up-tab">
-                <button class="tab-btn active" onclick="switchTab('books', this)">BOOKS</button>
-                <button class="tab-btn" onclick="switchTab('notes', this)">NOTES</button>
-                <button class="tab-btn" onclick="switchTab('questions', this)">QUESTION BANK</button>
-            </div>
-            <div class="pop-up-body">
-                <div id="books" class="tab-content active-content"></div>
-                <div id="notes" class="tab-content"></div>
-                <div id="questions" class="tab-content"></div>
-            </div>
+      <div class="pop-up-box">
+        <div class="pop-up-header">
+          <h2 class="pop-up-tittle">Engineering Graphics and Design</h2>
+          <button class="close-btn" onclick="closeModal()">✖</button>
         </div>
+        <div class="pop-up-tab">
+          <button class="tab-btn active" onclick="switchTab('books', this)">
+            BOOKS
+          </button>
+          <button class="tab-btn" onclick="switchTab('notes', this)">
+            NOTES
+          </button>
+          <button class="tab-btn" onclick="switchTab('questions', this)">
+            QUESTION BANK
+          </button>
+        </div>
+        <div class="pop-up-body">
+          <div id="books" class="tab-content active-content"></div>
+          <div id="notes" class="tab-content"></div>
+          <div id="questions" class="tab-content"></div>
+        </div>
+      </div>
     </div>
     <div class="pdf" id="pdf">
-        <div id="pdf-modal" class="modal-overlay">
-    <div class="pdf-box">
-        
-        <div class="modal-header">
+      <div id="pdf-modal" class="modal-overlay">
+        <div class="pdf-box">
+          <div class="modal-header">
             <h2 id="pdf-preview-title" class="modal-title">DOC TITLE</h2>
             <button class="close-btn" onclick="closePdfModal()">✖</button>
-            <a class="expand-btn" id="expand-link" href="#" target="_blank" title="Open in Google Drive">⛶</a>
-        </div>
+            <a
+              class="expand-btn"
+              id="expand-link"
+              href="#"
+              target="_blank"
+              title="Open in Google Drive"
+              >⛶</a
+            >
+          </div>
 
-        <div class="pdf-body">
+          <div class="pdf-body">
             <iframe id="pdf-iframe" src=" "></iframe>
-        </div>
+          </div>
 
-        <div class="pdf-footer">
-            <a id="pdf-download-btn" href="#" download class="connect-btn">Download PDF</a>
+          <div class="pdf-footer">
+            <a id="pdf-download-btn" href="#" download class="connect-btn"
+              >Download PDF</a
+            >
+          </div>
         </div>
+      </div>
+    </div>
 
-    </div>
-</div>  
-    </div>
-  
     <script src="script.js"></script>
-</body>
-<script src ="assests/TypeLighterJS-Typewriter-master/typelighter.min.js"></script>
-
+  </body>
+  <script src="assests/TypeLighterJS-Typewriter-master/typelighter.min.js"></script>
 </html>
