@@ -5,6 +5,26 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
 window.addEventListener("unhandledrejection", function (event) {
   console.error("Unhandled promise rejection:", event.reason);
 });
+let videoPlaying = true;
+function toggleVideo() {
+  const video = document.getElementById("video-desktop");
+  const button = document.querySelector(".button");
+  if (videoPlaying) {
+    video.pause();
+    video.style.opacity = "0";
+    button.textContent = "CONNECT";
+    button.style.backgroundColor = "#00f0ff";
+    button.style.color = "#000";
+    videoPlaying = false;
+  } else {
+    video.play();
+    video.style.opacity = "1";
+    button.textContent = "DISCONNECT";
+    button.style.backgroundColor = "#ffae00";
+    button.style.color = "#000";
+    videoPlaying = true;
+  }
+}
 const semesterConfig = {
   "1-odd": [
     { id: "graphics", text: "Engineering Graphics and Design" },
@@ -717,7 +737,7 @@ function generateListHTML(items) {
                 : '<span class="download-chip-placeholder" style="font-size:10px; color:#555;">N/A</span>'
             }
         </div>
-    `
+    `,
     )
     .join("");
 }
@@ -755,13 +775,12 @@ function openModal(event) {
   const modal = document.getElementById("pop-up-materials");
   const subjectKey = event.currentTarget.getAttribute("data-subject");
   const data = resources[subjectKey] || resources["default"];
-  document.querySelector(
-    ".pop-up-tittle"
-  ).innerHTML = `<span style="color:#00F0FF; margin-right:10px;">${data.icon}</span> ${data.title}`;
+  document.querySelector(".pop-up-tittle").innerHTML =
+    `<span style="color:#00F0FF; margin-right:10px;">${data.icon}</span> ${data.title}`;
   document.getElementById("books").innerHTML = generateListHTML(data.books);
   document.getElementById("notes").innerHTML = generateListHTML(data.notes);
   document.getElementById("questions").innerHTML = generateListHTML(
-    data.questions
+    data.questions,
   );
   modal.style.display = "flex";
   const firstTab = document.querySelector(".tab-btn");

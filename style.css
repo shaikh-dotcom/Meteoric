@@ -2,7 +2,8 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background: linear-gradient(to right, #101010 1px, transparent 1px),
+  background:
+    linear-gradient(to right, #101010 1px, transparent 1px),
     linear-gradient(to bottom, #101010 1px, transparent 1px);
   background-size: 20px 20px;
   background-color: #050505;
@@ -30,7 +31,9 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   color: #00f0ff;
-  text-shadow: 0 0 5px #00f0ff, 0 0 20px #00f0ff,
+  text-shadow:
+    0 0 5px #00f0ff,
+    0 0 20px #00f0ff,
     0 0 40px rgba(0, 240, 255, 0.5);
   background-color: rgb(255, 255, 255, 0.01);
   padding: 10px 80px;
@@ -50,6 +53,7 @@ body {
   object-fit: cover;
   z-index: -1;
   filter: brightness(75%);
+  transition: opacity 0.5s ease;
 }
 .button {
   background-color: #ffae00;
@@ -138,7 +142,9 @@ a {
 .round-card > *:hover {
   transform: scale(1.1);
   border: 1px solid #00f0ff;
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.6), 0 0 15px rgba(0, 240, 255, 0.3);
+  box-shadow:
+    0 0 8px rgba(0, 240, 255, 0.6),
+    0 0 15px rgba(0, 240, 255, 0.3);
   background-color: rgba(0, 240, 255, 0.1);
   color: #00f0ff;
   cursor: pointer;
@@ -198,14 +204,18 @@ a {
 .card > *:hover {
   transform: scale(1.1);
   border: 1px solid #00f0ff;
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.6), 0 0 15px rgba(0, 240, 255, 0.3);
+  box-shadow:
+    0 0 8px rgba(0, 240, 255, 0.6),
+    0 0 15px rgba(0, 240, 255, 0.3);
   background-color: rgba(0, 240, 255, 0.1);
   color: #e0ffff;
   cursor: pointer;
 }
 .card > *:active {
   border: 1px solid #00f0ff;
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.8), 0 0 20px rgba(0, 240, 255, 0.4),
+  box-shadow:
+    0 0 8px rgba(0, 240, 255, 0.8),
+    0 0 20px rgba(0, 240, 255, 0.4),
     0 0 30px rgba(0, 240, 255, 0.2);
   background-color: rgba(0, 240, 255, 0.15);
   color: #ffffff;
@@ -598,12 +608,16 @@ a {
 @keyframes electric-pulse {
   0%,
   100% {
-    text-shadow: 0 0 5px #00f0ff, 0 0 20px rgba(0, 240, 255, 0.8),
+    text-shadow:
+      0 0 5px #00f0ff,
+      0 0 20px rgba(0, 240, 255, 0.8),
       0 0 50px rgba(0, 240, 255, 0.4);
     opacity: 1;
   }
   50% {
-    text-shadow: 0 0 2px #00f0ff, 0 0 15px rgba(0, 240, 255, 0.5),
+    text-shadow:
+      0 0 2px #00f0ff,
+      0 0 15px rgba(0, 240, 255, 0.5),
       0 0 30px rgba(0, 240, 255, 0.2);
     opacity: 0.85;
   }
