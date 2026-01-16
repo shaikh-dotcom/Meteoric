@@ -19,7 +19,6 @@ const semesterConfig = {
     { id: "english-lab", text: "English Language Lab" },
   ],
   "1-even": [
-    // THESE ARE EXAMPLES. Replace "graphics" with your real 1-2 subject IDs from 'resources'
     { id: "analog", text: "Analog Electronics-I" },
     { id: "digital", text: "Digital Electronics" },
     { id: "analog-lab", text: "Sessional based on ETE 1211" },
@@ -31,22 +30,16 @@ const semesterConfig = {
     { id: "economics", text: "Financial Accounts and Economic Analysis" },
   ],
 };
-// --- FUNCTION: Load a Semester ---
 function loadSemester(semesterKey, clickedElement) {
   const container = document.getElementById("subject-container");
   const title = document.getElementById("semester-title");
 
-  // 1. VISUALS: Update the Round Buttons
-  // Remove 'active' from ALL round cards
   document.querySelectorAll(".round-card > div").forEach((el) => {
     el.classList.remove("active");
   });
-  // Add 'active' to the one we just clicked
   if (clickedElement) {
     clickedElement.classList.add("active");
   }
-
-  // 2. DATA: Get the list of subjects for this semester
   const subjects = semesterConfig[semesterKey];
 
   if (!subjects) {
@@ -54,21 +47,14 @@ function loadSemester(semesterKey, clickedElement) {
     return;
   }
 
-  // 3. RENDER: Clear old cards and create new ones
-  container.innerHTML = ""; // Wipe clean
+  container.innerHTML = "";
 
   subjects.forEach((sub) => {
-    // Create the div: <div class="cards" data-subject="...">Text</div>
     const card = document.createElement("div");
     card.classList.add("cards");
     card.setAttribute("data-subject", sub.id);
     card.innerText = sub.text;
-
-    // Add the click event to open the modal
-    // (We add it here because these elements are created dynamically)
     card.addEventListener("click", openModal);
-
-    // Add to container
     container.appendChild(card);
   });
 }
@@ -713,7 +699,6 @@ const resources = {
     ],
   },
 };
-// --- 2. HELPER FUNCTION: Generate HTML Lists ---
 function generateListHTML(items) {
   if (!items || items.length === 0)
     return '<div class="file-item" style="justify-content:center; opacity:0.5;">No files available</div>';
@@ -736,8 +721,6 @@ function generateListHTML(items) {
     )
     .join("");
 }
-// --- 3. PDF VIEWER LOGIC (UPDATED) ---
-// Helper: Convert Preview Link to Download Link
 function getDirectDownloadLink(previewUrl) {
   if (previewUrl.includes("drive.google.com")) {
     const parts = previewUrl.split("/d/");
@@ -748,62 +731,45 @@ function getDirectDownloadLink(previewUrl) {
   }
   return previewUrl;
 }
-// *** THIS IS THE MAIN UPDATE ***
 function openPdfViewer(url, title) {
   const pdfModal = document.getElementById("pdf");
   const iframe = document.getElementById("pdf-iframe");
   const titleEl = document.getElementById("pdf-preview-title");
   const downloadBtn = document.getElementById("pdf-download-btn");
-  const expandBtn = document.getElementById("expand-link"); // Select the expand button
-  // 1. Set the Title
+  const expandBtn = document.getElementById("expand-link");
   titleEl.innerText = title;
-  // 2. Load the PDF into the iframe
-  // (Your database has /preview links, which is perfect for the iframe)
   iframe.src = url;
-  // 3. Set the Download Link
   const directLink = getDirectDownloadLink(url);
   downloadBtn.href = directLink;
-  // 4. Set the Expand (Google Drive) Link
-  // We replace '/preview' with '/view' to give the user the full Drive UI in the new tab
   const drivePageLink = url.replace("/preview", "/view");
   expandBtn.href = drivePageLink;
-  // 5. Show the modal
   pdfModal.style.display = "flex";
 }
 function closePdfModal() {
   const pdfWrapper = document.getElementById("pdf");
   const iframe = document.getElementById("pdf-iframe");
-  // Hide Modal
   pdfWrapper.style.display = "none";
-  // Clear src to stop playing/loading
   iframe.src = "";
 }
-// --- 4. SUBJECT MODAL LOGIC ---
 function openModal(event) {
   const modal = document.getElementById("pop-up-materials");
   const subjectKey = event.currentTarget.getAttribute("data-subject");
-  // Find data or use default
   const data = resources[subjectKey] || resources["default"];
-  // Set Title
   document.querySelector(
     ".pop-up-tittle"
   ).innerHTML = `<span style="color:#00F0FF; margin-right:10px;">${data.icon}</span> ${data.title}`;
-  // Fill Tabs
   document.getElementById("books").innerHTML = generateListHTML(data.books);
   document.getElementById("notes").innerHTML = generateListHTML(data.notes);
   document.getElementById("questions").innerHTML = generateListHTML(
     data.questions
   );
-  // Show Modal
   modal.style.display = "flex";
-  // Reset to first tab
   const firstTab = document.querySelector(".tab-btn");
   if (firstTab) firstTab.click();
 }
 function closeModal() {
   document.getElementById("pop-up-materials").style.display = "none";
 }
-// --- 5. TAB SWITCHING LOGIC ---
 function switchTab(tabName, clickedButton) {
   document.querySelectorAll(".tab-content").forEach((content) => {
     content.classList.remove("active-content");
@@ -815,7 +781,6 @@ function switchTab(tabName, clickedButton) {
   if (activeTab) activeTab.classList.add("active-content");
   if (clickedButton) clickedButton.classList.add("active");
 }
-// --- 6. INITIALIZATION ---
 document.addEventListener("DOMContentLoaded", function () {
   // Close modals when clicking outside
   window.onclick = function (event) {
@@ -837,38 +802,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.target == pdfWrapper) closePdfModal();
   };
 });
-// --- MOBILE RADIAL MENU LOGIC ---
-
 function toggleMenu() {
   const container = document.querySelector(".radial-menu-container");
   const trigger = document.querySelector(".radial-trigger");
   container.classList.toggle("open");
   trigger.classList.toggle("active");
-
   const text = document.querySelector(".trigger-text");
-  // Update text based on state
   if (container.classList.contains("open")) {
     text.innerText = "CLOSE";
   } else {
-    // If an item is selected, show that, otherwise default
     const selected = document.querySelector(".radial-item.selected");
     text.innerText = selected ? selected.innerText : "SEMESTERS";
   }
 }
-
 function selectSemesterMobile(semesterKey, clickedElement) {
-  // 1. Load the data (Same function used by PC)
   loadSemester(semesterKey);
-
-  // 2. Visual Feedback for Mobile Menu
   document
     .querySelectorAll(".radial-item")
     .forEach((el) => el.classList.remove("selected"));
   clickedElement.classList.add("selected");
-
-  // 3. Update center button text
   document.querySelector(".trigger-text").innerText = clickedElement.innerText;
-
-  // 4. OPTIONAL: Auto-close menu after 0.5 seconds for smooth UX
-  // setTimeout(() => toggleMenu(), 300);
 }
