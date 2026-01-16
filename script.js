@@ -699,6 +699,30 @@ const resources = {
     ],
   },
 };
+let videoPlaying = true; // Track video state
+
+function toggleVideo() {
+  const video = document.getElementById('video-desktop');
+  const button = document.querySelector('.button');
+  
+  if (videoPlaying) {
+    // Turn OFF video
+    video.pause();
+    video.style.opacity = '0';
+    button.textContent = 'CONNECT';
+    button.style.backgroundColor = '#00f0ff';
+    button.style.color = '#000';
+    videoPlaying = false;
+  } else {
+    // Turn ON video
+    video.play();
+    video.style.opacity = '1';
+    button.textContent = 'DISCONNECT';
+    button.style.backgroundColor = '#ffae00';
+    button.style.color = '#000';
+    videoPlaying = true;
+  }
+}
 function generateListHTML(items) {
   if (!items || items.length === 0)
     return '<div class="file-item" style="justify-content:center; opacity:0.5;">No files available</div>';
