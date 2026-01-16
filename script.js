@@ -811,11 +811,6 @@ function switchTab(tabName, clickedButton) {
 }
 // --- 6. INITIALIZATION ---
 document.addEventListener("DOMContentLoaded", function () {
-  // Add click events to subject cards
-  const cards = document.querySelectorAll(".cards");
-  cards.forEach((card) => {
-    card.addEventListener("click", openModal);
-  });
   // Close modals when clicking outside
   window.onclick = function (event) {
     const subjectModal = document.getElementById("pop-up-materials");
@@ -829,11 +824,6 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 });
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Load the default semester (1st Year Odd)
-  // We select the first button to pass it as the "active" element
-  const firstBtn = document.querySelector(".round-card-one");
-  loadSemester("1-odd", firstBtn);
-  // 2. Global Event Listeners (Close modals)
   window.onclick = function (event) {
     const subjectModal = document.getElementById("pop-up-materials");
     const pdfWrapper = document.getElementById("pdf");
@@ -841,3 +831,38 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.target == pdfWrapper) closePdfModal();
   };
 });
+// --- MOBILE RADIAL MENU LOGIC ---
+
+function toggleMenu() {
+  const container = document.querySelector(".radial-menu-container");
+  const trigger = document.querySelector(".radial-trigger");
+  container.classList.toggle("open");
+  trigger.classList.toggle("active");
+
+  const text = document.querySelector(".trigger-text");
+  // Update text based on state
+  if (container.classList.contains("open")) {
+    text.innerText = "CLOSE";
+  } else {
+    // If an item is selected, show that, otherwise default
+    const selected = document.querySelector(".radial-item.selected");
+    text.innerText = selected ? selected.innerText : "SEMESTERS";
+  }
+}
+
+function selectSemesterMobile(semesterKey, clickedElement) {
+  // 1. Load the data (Same function used by PC)
+  loadSemester(semesterKey);
+
+  // 2. Visual Feedback for Mobile Menu
+  document
+    .querySelectorAll(".radial-item")
+    .forEach((el) => el.classList.remove("selected"));
+  clickedElement.classList.add("selected");
+
+  // 3. Update center button text
+  document.querySelector(".trigger-text").innerText = clickedElement.innerText;
+
+  // 4. OPTIONAL: Auto-close menu after 0.5 seconds for smooth UX
+  // setTimeout(() => toggleMenu(), 300);
+}

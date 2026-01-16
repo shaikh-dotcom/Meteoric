@@ -18,8 +18,8 @@
       loop
       muted
       playsinline
-      class="video-deksotp"
-      id="video-deksotp"
+      class="video-desktop"
+      id="video-desktop"
     >
       <source src="assests/2792370-hd_1920_1080_30fps.mp4" type="video/mp4" />
     </video>
@@ -60,11 +60,8 @@
         >
         </span>
       </div>
-      <nav class="round-card">
-        <div
-          class="round-card-one active"
-          onclick="loadSemester('1-odd', this)"
-        >
+      <nav class="round-card desktop only">
+        <div class="round-card-one" onclick="loadSemester('1-odd', this)">
           1st YEAR-ODD
         </div>
         <div class="round-card-two" onclick="loadSemester('1-even', this)">
@@ -89,7 +86,71 @@
           4th YEAR-EVEN
         </div>
       </nav>
+      <div class="radial-menu-container mobile-only">
+        <div class="radial-trigger" onclick="toggleMenu()">
+          <div class="trigger-icon">⚡</div>
+          <div class="trigger-text">SEMESTERS</div>
+        </div>
 
+        <div class="radial-items">
+          <div
+            class="radial-item"
+            style="--i: 0"
+            onclick="selectSemesterMobile('1-odd', this)"
+          >
+            1-1
+          </div>
+          <div
+            class="radial-item"
+            style="--i: 1"
+            onclick="selectSemesterMobile('1-even', this)"
+          >
+            1-2
+          </div>
+          <div
+            class="radial-item"
+            style="--i: 2"
+            onclick="selectSemesterMobile('2-odd', this)"
+          >
+            2-1
+          </div>
+          <div
+            class="radial-item"
+            style="--i: 3"
+            onclick="selectSemesterMobile('2-even', this)"
+          >
+            2-2
+          </div>
+          <div
+            class="radial-item"
+            style="--i: 4"
+            onclick="selectSemesterMobile('3-odd', this)"
+          >
+            3-1
+          </div>
+          <div
+            class="radial-item"
+            style="--i: 5"
+            onclick="selectSemesterMobile('3-even', this)"
+          >
+            3-2
+          </div>
+          <div
+            class="radial-item"
+            style="--i: 6"
+            onclick="selectSemesterMobile('4-odd', this)"
+          >
+            4-1
+          </div>
+          <div
+            class="radial-item"
+            style="--i: 7"
+            onclick="selectSemesterMobile('4-even', this)"
+          >
+            4-2
+          </div>
+        </div>
+      </div>
       <h2 class="card-name" id="semester-title">Circuit path</h2>
 
       <div class="card" id="subject-container"></div>
