@@ -1,4 +1,10 @@
-// --- CONFIGURATION: Which subjects go in which semester? ---
+window.onerror = function (msg, url, lineNo, columnNo, error) {
+  console.error("Error: " + msg + "\nURL: " + url + "\nLine: " + lineNo);
+  return false;
+};
+window.addEventListener("unhandledrejection", function (event) {
+  console.error("Unhandled promise rejection:", event.reason);
+});
 const semesterConfig = {
   "1-odd": [
     { id: "graphics", text: "Engineering Graphics and Design" },
