@@ -20,7 +20,6 @@ body {
 .search-bar {
   display: grid;
   grid-template-columns: auto auto;
-  list-style: none;
   column-gap: 20px;
   padding-top: 60px;
 }
