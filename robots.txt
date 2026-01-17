@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shaikh-dotcom.github.io/Meteoric/sitemap.xml
