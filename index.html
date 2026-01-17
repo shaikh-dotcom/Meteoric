@@ -96,15 +96,26 @@
   </head>
   <body>
     <video
-      autoplay
       loop
       muted
       playsinline
       class="video-desktop"
       id="video-desktop"
+      preload="none"
+      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%23050505' width='1920' height='1080'/%3E%3C/svg%3E"
     >
-      <source src="assests/2792370-hd_1920_1080_30fps.mp4" type="video/mp4" />
+      <source
+        src="assests/2792370-hd_1920_1080_30fps-compresed.mp4"
+        type="video/mp4"
+      />
     </video>
+    <script>
+      window.addEventListener("load", function () {
+        const video = document.getElementById("video-desktop");
+        video.load();
+        video.play().catch((e) => console.log("Video autoplay prevented"));
+      });
+    </script>
     <header class="brand">
       <img
         src="assests/Whats-App-Image-2025-11-13-at-9-35-35-PM-removebg-preview.png"
